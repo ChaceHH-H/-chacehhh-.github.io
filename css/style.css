@@ -1,0 +1,54 @@
+body{
+    margin: 30px;
+}
+#heading1{
+    width: 100%;
+    font-weight: 600;
+    font-size: 50px;
+    margin-top: 10px;
+}
+#heading2{
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+#box1{
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+}
+.section{
+    width: 25%;
+    font-size: 30px;
+    color: rgb(32, 83, 251);
+}
+#box2{
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+}
+#text1{
+    
+}
+#img{
+    
+}
+#box3{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(210, 210, 210);
+    margin-top: 16px;
+}
+.if1{
+    border: 0px solid rgb(0, 0, 0);
+    width: 50%;
+    margin-top: 15px;
+}
+.if2{
+    border: 0px solid rgb(0, 0, 0);
+    width: 33%;
+    margin-bottom: 15px;
+}
