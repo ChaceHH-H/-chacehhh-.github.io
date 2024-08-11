@@ -1,167 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Water Reminder App</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eee;
-  }
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  .app-name {
-    font-size: 24px;
-  }
-  .section {
-    background: white;
-    padding: 40px 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .section img {
-    width: 100%; 
-    height: auto;
-    margin: 20px 0;
-    background-color: #ccc;
-  }
-  .text-block, .image-block {
-    flex-basis: 100%; 
-    flex: 1;
-  }
-  .section:nth-child(even) .text-block {
-    order: 2; 
-  }
-  .section:nth-child(even) .image-block {
-    order: 1;
-  }
-  .button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px 5px;
-  }
-  .footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-  }
-
-  .section ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .section li {
-    background-color: #e8f4ff;
-    margin: 8px 0;
-    padding: 10px;
-    border-left: 5px solid #0056b3;
-    font-size: 14px;
-  }
-
-  @media (min-width: 768px) {
-    .text-block, .image-block {
-      flex-basis: 48%; 
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmet Safety Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="dashboard">
+        <main class="grid-container" id="dataContainer">
+            <!-- Data items will be dynamically inserted here -->
+        </main>
+    </div>
 
-<div class="navbar">
-  <div class="app-name">Water Reminder</div>
-</div>
-
-<!-- App Introduction Section -->
-<div class="section" style="background-color: #f8f8f8;">
-  <div class="text-block">
-    <h1>Welcome to Drinking Water Simulator</h1>
-    <p> - Your daily water management expert! Our app is designed to help you simplify water tracking through technology, ensuring your daily hydration intake is always optimal. Whether you want to improve your drinking habits or need regular reminders to replenish water, Drinking Water Simulator is your ideal choice.</p>
-    <a href="https://github.com/ChaceHH-H/casa0015-HHC" class="button">Github</a>
-    <a href="https://drive.google.com/uc?export=download&id=1XZv-EHS6X5hRax5uGrWnLYeDrSv9vgte" download="Water Reminder" class="button">Download APP</a>
-  </div>
-  <div class="image-block">
-    <img src="https://github.com/ChaceHH-H/Image/blob/main/mockup-b109ed1d.jpg?raw=true" alt="App Introduction Image">
-  </div>
-</div>
-
-<div class="section">
-  <div class="text-block">
-    <h2>Problems Solved by the App</h2>
-    <p>In our busy daily lives, many people tend to overlook the importance of drinking adequate amounts of water, which can lead to dehydration and other health problems. Drinking water simulator app is designed to solve this common problem.Our app helps users stay hydrated by sending timely reminders, tracking daily water intake, and providing hydration insights to improve their health.</p>
-  </div>
-  <div class="image-block">
-    <img src="https://github.com/ChaceHH-H/Image/blob/main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-20%20001100.png?raw=true" alt="Problems Solved Image">
-  </div>
-</div>
-
-
-<!-- Subsection 1 -->
-<div class="section">
-  <div class="text-block">
-    <h2>Water tracking main page</h2>
-    <p>The main page of water tracking is the core interface of the water drinking simulator application, specially designed to help users manage and monitor their daily water consumption.</p>
-    <ul>
-      <li><strong>Show drinking water target: </strong>Set personal daily water drinking goals and adjust your water intake.</li>
-      <li><strong>Real-time progress updates: </strong>After each water drinking record, the progress bar is updated to show the comparison with the target.</li>
-      <li><strong>Add drinking record: </strong>Quickly add drinking water data with a button, and the data is uploaded and saved to Firebase.</li>
-      <li><strong>Data synchronization and storage: </strong>All data is securely uploaded to Firebase for easy review and analysis.</li>
-  </ul>
-  </div>
-  <div class="image-block">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dUWct-q2di4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<!-- Subsection 2 -->
-<div class="section">
-  <div class="text-block">
-    <h2>History Page</h2>
-    <p>History Page provides users with a detailed history viewing interface for tracking and analyzing drinking habits.</p>
-    <ul>
-      <li><strong>View historical drinking records: </strong>Users can view their past water drinking records, which detail their daily water intake.</li>
-      <li><strong>Time filter function: </strong>Users can choose to view drinking water data within a specific time period as needed, such as daily, weekly or monthly.</li>
-      <li><strong>Data synchronization and update: </strong>All drinking water data is synchronized from the Firebase database in real time, ensuring that the information viewed by users is always up to date.</li>
-  </ul>
-  </div>
-  <div class="image-block">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFhsCCZn-D0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<!-- Subsection 3 -->
-<div class="section">
-  <div class="text-block">
-    <h2>Clock Page</h2>
-    <p>Clock Page mainly provides users with customized drinking water reminder services. This page is designed to ensure users drink water on time to maintain adequate daily fluid intake.</p>
-    <ul>
-      <li><strong>Enable/disable reminders: </strong>Users can switch the button to enable or disable the water reminder function.</li>
-      <li><strong>Set reminder frequency: </strong>Users can choose how often they wish to receive reminders. This can be every one hour or two hour interval.</li>
-      <li><strong>Choose a do-not-disturb period: </strong>The app allows users to set "disturbance periods," such as during nighttime sleep times. During these periods, the app will not send water reminders to avoid disturbing the user's rest.</li>
-  </ul>
-  </div>
-  <div class="image-block">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/oBLVHBNyMKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-
-<div class="footer">
-  <p>&copy; 2024 Water Reminder App. All rights reserved.</p>
-</div>
-
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+    grid-auto-rows: 200px; /* Same height for all rows */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-auto-rows: 150px; /* Reduce row height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on mobile phones */
+        grid-auto-rows: auto; /* Allow rows to adjust based on content */
+    }
+
+    .data-item {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .data-item span {
+        font-size: 16px; /* Reduce font size for better readability on small screens */
+        display: block; /* Ensure text wraps within the container */
+    }
+
+    .data-item img, .data-item i {
+        width: 25px;
+        height: 25px;
+    }
+
+    .impact-item {
+        flex-direction: column; /* Stack the date and status vertically */
+        align-items: flex-start;
+        margin-bottom: 5px; /* Add some space between each item */
+    }
+
+    .impact-item span {
+        margin-bottom: 3px; /* Add some space between the timestamp and status */
+        font-size: 14px;
+    }
+}
+
+.data-item {
+    background-color: #4a90e2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.data-item:hover {
+    background-color: #6ab0f2;
+    transform: translateY(-5px);
+}
+
+.data-item span {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.data-item img, .data-item i {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.impact-list {
+    max-height: 120px; /* Limit the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
+    text-align: left;
+}
+
+.impact-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.impact-item span {
+    font-size: 14px;
+    margin-right: 5px; /* Reduce the space between time and text */
+    word-wrap: break-word; /* Ensure long text wraps within the container */
+}
