@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDQLBZquq18ScMUz-CusPv1LZtTwV4dJxA",
     authDomain: "fir-flutter-codelab-a80ae.firebaseapp.com",
@@ -18,14 +17,16 @@ function fetchAndDisplayData(doc) {
     const dataContainer = document.getElementById('dataContainer');
     dataContainer.innerHTML = ''; 
 
-    // First, add the heart rate card
+    // First, add the wearing status card
+    addDataItemSimple(dataContainer, '<i class="fas fa-hard-hat"></i>', 'Wearing Status', data.fsr ? 'Wearing' : 'Not Wearing');
+
+    // Then, add the heart rate card
     addDataItemSimple(dataContainer, '<i class="fas fa-heartbeat"></i>', 'Heart Rate', data.avgbpm);
 
-    // Then, add the other data cards
+    // Finally, add the other data cards
     addDataItem(dataContainer, 'https://img.icons8.com/fluency/48/000000/test-tube.png', 'C2H5OH', data.C2H5OH, data.C2H5OHalarm);
     addDataItem(dataContainer, 'https://img.icons8.com/fluency/48/000000/gas.png', 'CH4', data.CH4, data.CH4alarm);
     addDataItem(dataContainer, 'https://img.icons8.com/fluency/48/000000/poison-bottle.png', 'CO', data.CO, data.COalarm);
-    addDataItemSimple(dataContainer, '<i class="fas fa-hard-hat"></i>', 'FSR', data.fsr);
 
     // Fetch and display impact data
     fetchAndDisplayImpactData();
