@@ -95,8 +95,15 @@ body {
 }
 
 .data-item img, .data-item i {
-    width: 30px;
-    height: 30px;
+    width: 35px; /* Increase icon size */
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+/* New style for the instructions */
+.instruction {
+    font-size: 14px; /* Smaller font size for instructions */
+    color: #666; /* Slightly lighter color */
     margin-bottom: 10px;
 }
 
